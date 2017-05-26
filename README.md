@@ -15,3 +15,7 @@ menggunakan where kondisi dengan field `user` ketika melakukan operasi pada tabe
 \UserEmail\Model\UserEmail::get(['id' => 1, 'user' => 1]);
 \UserEmail\Model\UserEmail::get(['email' => 'lorem@ipsum.com', 'user'=>2]);
 ```
+
+Pada tabel `user_email` terdapat kolom `code` yang disediakan untuk menyimpan 
+informasi verifikasi email. Kolom tersebut tidak digunakan oleh modul ini, dan
+dipersiapkan untuk digunakan oleh modul lain.

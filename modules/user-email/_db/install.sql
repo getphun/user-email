@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS `user_email` (
-    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `id` INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `user` INTEGER NOT NULL,
     `address` VARCHAR(150) NOT NULL,
     -- 1 Unverified
@@ -8,12 +8,5 @@ CREATE TABLE IF NOT EXISTS `user_email` (
     `status` TINYINT DEFAULT 1,
     `code` VARCHAR(150),
     `updated` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    `created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    
-    PRIMARY KEY (
-        `id`,
-        `user`
-    )
-)
-    PARTITION BY KEY(`user`)
-    PARTITIONS 50;
+    `created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

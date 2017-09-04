@@ -11,4 +11,3 @@ CREATE TABLE IF NOT EXISTS `user_email` (
     `created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 CREATE INDEX `by_user` ON `user_email` ( `user` );
-CREATE INDEX `by_address` ON `user_email` ( `address` );
